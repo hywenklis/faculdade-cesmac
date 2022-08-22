@@ -1,5 +1,5 @@
-from stdiomask import getpass
 from socket import AF_INET, SOCK_STREAM, socket
+from getpass import getpass
 
 HOST = '127.0.0.1'
 PORTA = 50000
@@ -15,7 +15,7 @@ def envia_login():
 
 
 def envia_senha():
-    senha = getpass("Digite sua senha: ", "*")
+    senha = getpass("Digite sua senha: ")
     conexao.send(senha.encode())
 
 
