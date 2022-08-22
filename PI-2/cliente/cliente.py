@@ -3,6 +3,7 @@ from getpass import getpass
 
 HOST = '127.0.0.1'
 PORTA = 50000
+AUTORIZADO = "Autenticado com Sucesso! Bem vindo ao nosso sistema :D"
 
 conexao = socket(AF_INET, SOCK_STREAM)
 conexao.connect((HOST, PORTA))
@@ -25,9 +26,8 @@ while True:
 
     data = conexao.recv(1024)
     print("Servidor: ", data.decode())
-    autorizado = "Autenticado com Sucesso! Bem vindo ao nosso sistema :D"
-    nao_autorizado = "Não foi possível se conectar, tente novamente"
-    if data.decode() == autorizado:
+
+    if data.decode() == AUTORIZADO:
         break
 
 print("Fechando a conexão")
