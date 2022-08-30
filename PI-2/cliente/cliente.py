@@ -24,10 +24,10 @@ while True:
     envia_login()
     envia_senha()
 
-    data = conexao.recv(1024)
-    print("Servidor: ", data.decode())
+    resposta = conexao.recv(1024)
+    print("Servidor: ", resposta.decode())
 
-    if data.decode() == AUTORIZADO:
+    if resposta.decode() == AUTORIZADO:
         break
 
 print("Fechando a conexão")
