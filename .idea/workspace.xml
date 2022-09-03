@@ -5,11 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="21c1d05b-69d1-4038-8853-5cc3e34df162" name="Changes" comment="Remove variável não utilizada">
-      <change beforePath="$PROJECT_DIR$/.idea/faculdade.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/faculdade.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PI-2/cliente/cliente.py" beforeDir="false" afterPath="$PROJECT_DIR$/PI-2/cliente/cliente.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PI-2/servidor/servidor.py" beforeDir="false" afterPath="$PROJECT_DIR$/PI-2/servidor/servidor.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -157,16 +153,5 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Remove variável não utilizada" />
     <option name="LAST_COMMIT_MESSAGE" value="Remove variável não utilizada" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/PI-2/servidor/servidor.py</url>
-          <line>77</line>
-          <option name="timeStamp" value="27" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

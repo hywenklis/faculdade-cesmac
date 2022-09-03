@@ -4,7 +4,7 @@
 > computadores.
 >
 > A proposta consiste em criar um sistema de caixa eletrônico com as opções de
-> **Depositar**, **Sacar**, e **Visualizar o saldo**,
+> **Depositar**, **Sacar**, **Extrato** e **Sair**
 > separados em dois ambientes: **Cliente** e **servidor**.
 >
 > Para resolver esse problema foi recomendado a linguagem python e a biblioteca
