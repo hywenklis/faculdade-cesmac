@@ -35,7 +35,7 @@ def autenticando_cliente():
             print(f"Cliente: login={login_decodificado} senha={senha_decodificado}")
             autorizado = "Autenticado com Sucesso! Bem vindo ao nosso sistema :D"
             conexao.send(autorizado.encode())
-            break
+        break
 
 
 def envia_comando(conexao, comando):
