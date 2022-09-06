@@ -121,4 +121,4 @@ while VALOR_TOTAL_COM_DESCONTO or VALOR_TOTAL > SALDO_DO_CLIENTE2:
         print("ATÉ BREVE!")
         break
 
-print("teste")
+print("corrigido")
