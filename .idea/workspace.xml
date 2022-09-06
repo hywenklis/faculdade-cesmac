@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="21c1d05b-69d1-4038-8853-5cc3e34df162" name="Changes" comment="Remove variável não utilizada">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PI-2/servidor/servidor.py" beforeDir="false" afterPath="$PROJECT_DIR$/PI-2/servidor/servidor.py" afterDir="false" />
-    </list>
+    <list default="true" id="21c1d05b-69d1-4038-8853-5cc3e34df162" name="Changes" comment="Remove variável não utilizada" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -24,7 +21,7 @@
     <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="develop" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -52,7 +49,7 @@
       <recent name="$PROJECT_DIR$/PENSAMENTO-COMPUTACIONAL-PYTHON" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.servidor">
+  <component name="RunManager" selected="Python.pizzaria">
     <configuration name="cliente" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="faculdade" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -118,9 +115,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.pizzaria" />
         <item itemvalue="Python.servidor" />
         <item itemvalue="Python.cliente" />
-        <item itemvalue="Python.pizzaria" />
         <item itemvalue="Python.servidor" />
         <item itemvalue="Python.pizzaria" />
       </list>
