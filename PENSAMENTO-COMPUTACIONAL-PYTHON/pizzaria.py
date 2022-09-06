@@ -120,3 +120,5 @@ while VALOR_TOTAL_COM_DESCONTO or VALOR_TOTAL > SALDO_DO_CLIENTE2:
         print(f"CLIENTE {nome_cliente} OPTOU POR NÃO CONTINUAR COM A COMPRA! ENCERRAMOS O PEDIDO")
         print("ATÉ BREVE!")
         break
+
+print("teste")
