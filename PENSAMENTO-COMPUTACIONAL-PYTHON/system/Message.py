@@ -1,5 +1,3 @@
-
-
 def bem_vindo():
     print("BEM-VINDO(A) IREMOS SEGUIR COM O SEU ATENDIMENTO!")
     print("COMO PODEMOS LHE CHAMAR? ")
@@ -34,3 +32,11 @@ def registro_do_pedido(nome, sabor, tamanho, observacao):
     print(f"TAMANHO: {tamanho}")
     print(f"OBSERVAÇÕES: {observacao}")
     print()
+
+
+def taxa_frete():
+    print("=" * 40)
+    print("{:^40}".format("TAXA DE FRETE"))
+    print("=" * 40)
+    delivery = input("SERÁ DELIVERY ? ESCOLHA [S/N]: ")
+    return delivery

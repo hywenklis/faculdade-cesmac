@@ -19,11 +19,7 @@ VALOR_TOTAL = Pizza.Tamanho.retorna_valor(tamanho_pizza, VALOR_TOTAL)
 sabor_pizza = Message.sabor_pizza()
 observacao_pedido = Message.observacao_pedido()
 Message.registro_do_pedido(cliente.nome, sabor_pizza, tamanho_pizza, observacao_pedido)
-
-print("=" * 40)
-print("{:^40}".format("TAXA DE FRETE"))
-print("=" * 40)
-delivery = input("SERÁ DELIVERY ? ESCOLHA [S/N]: ")
+delivery = Message.taxa_frete()
 VALOR_TOTAL = TaxaFrete.calcula(delivery, VALOR_TOTAL, TAXA_FRETE)
 
 print("=" * 40)
