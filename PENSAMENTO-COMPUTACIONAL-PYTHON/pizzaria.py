@@ -1,4 +1,5 @@
 from enums import Pizza
+from model import Pessoa
 
 VALOR_TOTAL = 0
 TAXA_FRETE = 10.00
@@ -7,13 +8,13 @@ DESCONTO = 10
 VALOR_TOTAL_COM_DESCONTO = 0
 VALOR_TOTAL_PARCELADO = 0
 
-SALDO_DO_CLIENTE1 = 200
-SALDO_DO_CLIENTE2 = 20
-
 print("BEM-VINDO(A) IREMOS SEGUIR COM O SEU ATENDIMENTO!")
 print("COMO PODEMOS LHE CHAMAR? ")
 nome_cliente = input("Digite seu nome: ")
-print(f"OLÁ {nome_cliente} VAMOS SEGUIR COM SEU PEDIDO, ABAIXO PASSE ALGUMAS INFORMAÇÕES PARA QUE POSSAMOS SEGUIR!")
+
+cliente = Pessoa.Pessoa(nome_cliente, 1000.00)
+
+print(f"OLÁ {cliente.nome} VAMOS SEGUIR COM SEU PEDIDO, ABAIXO PASSE ALGUMAS INFORMAÇÕES PARA QUE POSSAMOS SEGUIR!")
 tamanho_pizza = input("Escolha entre os seguintes tamanho [P, M, G, GG, TM]: ")
 
 if tamanho_pizza == "P":
@@ -33,7 +34,7 @@ print()
 print("=" * 40)
 print("{:^40}".format("PEDIDO DE PIZZA"))
 print("=" * 40)
-print(f"PEDIDO REGISTRADO PARA {nome_cliente}!")
+print(f"PEDIDO REGISTRADO PARA {cliente.nome}!")
 print(f"SABOR: {sabor_pizza}")
 print(f"TAMANHO: {tamanho_pizza}")
 print(f"OBSERVAÇÕES: {observacao_pedido}")
@@ -63,6 +64,11 @@ else:
     print(f"O VALOR DO SEU PEDIDO É DE: R${VALOR_TOTAL}")
 print()
 
+if VALOR_TOTAL_COM_DESCONTO > 0:
+    VALOR_TOTAL = VALOR_TOTAL_COM_DESCONTO
+
+print(VALOR_TOTAL)
+
 
 def escolher_metodo_de_pagamento():
     print("=" * 40)
@@ -73,46 +79,39 @@ def escolher_metodo_de_pagamento():
     print("2 - DÉBITO")
     print("3 - PIX")
     METODO_PAGAMENTO = int(input())
+
     if METODO_PAGAMENTO == 1:
         print("PAGAMENTO NO CREDITO COM PARCELA")
         PARCELA = int(input("DESEJA PARCELAR EM QUANTAS VEZES: "))
 
-        if VALOR_TOTAL_COM_DESCONTO > 0:
-            VALOR_TOTAL_PARCELADO = VALOR_TOTAL_COM_DESCONTO / PARCELA
-            print(
-                f"{nome_cliente} VOCÊ DIVIDIU O SALDO DE R${VALOR_TOTAL_COM_DESCONTO} EM {PARCELA}x FICANDO NO VALOR DE R${VALOR_TOTAL_PARCELADO} CADA PARCELA")
-        else:
+        if VALOR_TOTAL > 0:
             VALOR_TOTAL_PARCELADO = VALOR_TOTAL / PARCELA
             print(
-                f"{nome_cliente} VOCÊ DIVIDIU O SALDO DE R${VALOR_TOTAL} EM {PARCELA}x FICANDO NO VALOR DE R${VALOR_TOTAL_PARCELADO} CADA PARCELA")
+                f"{cliente.nome} VOCÊ DIVIDIU O SALDO DE R${VALOR_TOTAL} EM {PARCELA}x FICANDO NO VALOR DE R${VALOR_TOTAL_PARCELADO} CADA PARCELA")
 
     elif METODO_PAGAMENTO == 2:
         print("PAGAMENTO NO DEBITO")
-        if VALOR_TOTAL_COM_DESCONTO > 0:
-            print(f"{nome_cliente} SEU VALOR TOTAL É DE: R${VALOR_TOTAL_COM_DESCONTO}")
-        else:
-            print(f"{nome_cliente} SEU VALOR TOTAL É DE: R${VALOR_TOTAL}")
+        if VALOR_TOTAL > 0:
+            print(f"{cliente.nome} SEU VALOR TOTAL É DE: R${VALOR_TOTAL}")
 
     elif METODO_PAGAMENTO == 3:
         print("PAGAMENTO NO PIX")
-        if VALOR_TOTAL_COM_DESCONTO > 0:
-            print(f"{nome_cliente} SEU VALOR TOTAL É DE: R${VALOR_TOTAL_COM_DESCONTO}")
-        else:
-            print(f"{nome_cliente} SEU VALOR TOTAL É DE: R${VALOR_TOTAL}")
+        if VALOR_TOTAL > 0:
+            print(f"{cliente.nome} SEU VALOR TOTAL É DE: R${VALOR_TOTAL}")
 
 
 escolher_metodo_de_pagamento()
 print()
 
-if VALOR_TOTAL_COM_DESCONTO or VALOR_TOTAL < SALDO_DO_CLIENTE2:
+if VALOR_TOTAL < cliente.saldo_conta:
     print("COMPRA APROVADA! OBRIGADO PELA PREFERÊNCIA.")
-
-while VALOR_TOTAL_COM_DESCONTO or VALOR_TOTAL > SALDO_DO_CLIENTE2:
-    print("SEU SALDO É INSUFICIENTE DESEJA CONTINUAR COM A COMPRA?")
-    CONFIRMA_COMPRA = input("DIGITE [S/N]: ")
-    if CONFIRMA_COMPRA == "S":
-        escolher_metodo_de_pagamento()
-    else:
-        print(f"CLIENTE {nome_cliente} OPTOU POR NÃO CONTINUAR COM A COMPRA! ENCERRAMOS O PEDIDO")
-        print("ATÉ BREVE!")
-        break
+else:
+    while VALOR_TOTAL > cliente.saldo_conta:
+        print("SEU SALDO É INSUFICIENTE DESEJA CONTINUAR COM A COMPRA?")
+        CONFIRMA_COMPRA = input("DIGITE [S/N]: ")
+        if CONFIRMA_COMPRA == "S":
+            escolher_metodo_de_pagamento()
+        else:
+            print(f"CLIENTE {cliente.nome} OPTOU POR NÃO CONTINUAR COM A COMPRA! ENCERRAMOS O PEDIDO")
+            print("ATÉ BREVE!")
+            break
