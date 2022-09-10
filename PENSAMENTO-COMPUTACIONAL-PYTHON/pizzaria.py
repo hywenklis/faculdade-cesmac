@@ -1,6 +1,7 @@
 from enums import Pizza
 from model import Pessoa
 from service import TaxaFrete
+from system import Message
 
 VALOR_TOTAL = 0
 TAXA_FRETE = 10.00
@@ -10,26 +11,14 @@ VALOR_TOTAL_COM_DESCONTO = 0
 VALOR_TOTAL_PARCELADO = 0
 cliente = Pessoa.Pessoa("", 1000.00)
 
-print("BEM-VINDO(A) IREMOS SEGUIR COM O SEU ATENDIMENTO!")
-print("COMO PODEMOS LHE CHAMAR? ")
+Message.bem_vindo()
 cliente.set_nome()
-
-print(f"OLÁ {cliente.nome} VAMOS SEGUIR COM SEU PEDIDO, ABAIXO PASSE ALGUMAS INFORMAÇÕES PARA QUE POSSAMOS SEGUIR!")
-tamanho_pizza = input("Escolha entre os seguintes tamanho [P, M, G, GG, TF]: ")
+Message.informacao_do_pedido(cliente.nome)
+tamanho_pizza = Message.tamanho_pizza()
 VALOR_TOTAL = Pizza.Tamanho.retorna_valor(tamanho_pizza, VALOR_TOTAL)
-
-sabor_pizza = input("Digite o sabor que deseja: ")
-observacao_pedido = input("Alguma observação para o seu pedido ?: ")
-
-print()
-print("=" * 40)
-print("{:^40}".format("PEDIDO DE PIZZA"))
-print("=" * 40)
-print(f"PEDIDO REGISTRADO PARA {cliente.nome}!")
-print(f"SABOR: {sabor_pizza}")
-print(f"TAMANHO: {tamanho_pizza}")
-print(f"OBSERVAÇÕES: {observacao_pedido}")
-print()
+sabor_pizza = Message.sabor_pizza()
+observacao_pedido = Message.observacao_pedido()
+Message.registro_do_pedido(cliente.nome, sabor_pizza, tamanho_pizza, observacao_pedido)
 
 print("=" * 40)
 print("{:^40}".format("TAXA DE FRETE"))
