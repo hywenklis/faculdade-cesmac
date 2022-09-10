@@ -7,26 +7,16 @@ VALOR_PARA_GANHAR_DESCONTO = 150.00
 DESCONTO = 10
 VALOR_TOTAL_COM_DESCONTO = 0
 VALOR_TOTAL_PARCELADO = 0
+cliente = Pessoa.Pessoa("", 1000.00)
 
 print("BEM-VINDO(A) IREMOS SEGUIR COM O SEU ATENDIMENTO!")
 print("COMO PODEMOS LHE CHAMAR? ")
-nome_cliente = input("Digite seu nome: ")
-
-cliente = Pessoa.Pessoa(nome_cliente, 1000.00)
+cliente.set_nome()
 
 print(f"OLÁ {cliente.nome} VAMOS SEGUIR COM SEU PEDIDO, ABAIXO PASSE ALGUMAS INFORMAÇÕES PARA QUE POSSAMOS SEGUIR!")
 tamanho_pizza = input("Escolha entre os seguintes tamanho [P, M, G, GG, TM]: ")
-
-if tamanho_pizza == "P":
-    VALOR_TOTAL += Pizza.Tamanho.P.value
-elif tamanho_pizza == "M":
-    VALOR_TOTAL += Pizza.Tamanho.M.value
-elif tamanho_pizza == "G":
-    VALOR_TOTAL += Pizza.Tamanho.G.value
-elif tamanho_pizza == "GG":
-    VALOR_TOTAL += Pizza.Tamanho.GG.value
-elif tamanho_pizza == "TM":
-    VALOR_TOTAL += Pizza.Tamanho.TM.value
+valor_da_pizza = Pizza.Tamanho.retorna_valor(tamanho_pizza, VALOR_TOTAL)
+VALOR_TOTAL += valor_da_pizza
 
 sabor_pizza = input("Digite o sabor que deseja: ")
 observacao_pedido = input("Alguma observação para o seu pedido ?: ")
