@@ -1,8 +1,4 @@
-P = 15.00
-M = 20.00
-G = 30.00
-GG = 45.00
-TAMANHO_FAMILIA = 150.00
+from enums import Pizza
 
 VALOR_TOTAL = 0
 TAXA_FRETE = 10.00
@@ -21,15 +17,15 @@ print(f"OLÁ {nome_cliente} VAMOS SEGUIR COM SEU PEDIDO, ABAIXO PASSE ALGUMAS IN
 tamanho_pizza = input("Escolha entre os seguintes tamanho [P, M, G, GG, TM]: ")
 
 if tamanho_pizza == "P":
-    VALOR_TOTAL += P
+    VALOR_TOTAL += Pizza.Tamanho.P.value
 elif tamanho_pizza == "M":
-    VALOR_TOTAL += M
+    VALOR_TOTAL += Pizza.Tamanho.M.value
 elif tamanho_pizza == "G":
-    VALOR_TOTAL += G
+    VALOR_TOTAL += Pizza.Tamanho.G.value
 elif tamanho_pizza == "GG":
-    VALOR_TOTAL += GG
+    VALOR_TOTAL += Pizza.Tamanho.GG.value
 elif tamanho_pizza == "TM":
-    VALOR_TOTAL += TAMANHO_FAMILIA
+    VALOR_TOTAL += Pizza.Tamanho.TM.value
 
 sabor_pizza = input("Digite o sabor que deseja: ")
 observacao_pedido = input("Alguma observação para o seu pedido ?: ")
