@@ -1,7 +1,7 @@
 from enums import Pizza
 from model import Pessoa
 from service import TaxaFrete
-from system import Message
+from system import Mensagem
 
 VALOR_TOTAL = 0
 TAXA_FRETE = 10.00
@@ -9,17 +9,17 @@ VALOR_PARA_GANHAR_DESCONTO = 150.00
 DESCONTO = 10
 VALOR_TOTAL_COM_DESCONTO = 0
 VALOR_TOTAL_PARCELADO = 0
-cliente = Pessoa.Pessoa("", 1000.00)
+cliente = Pessoa.Pessoa("", 1.00)
 
-Message.bem_vindo()
+Mensagem.bem_vindo()
 cliente.set_nome()
-Message.informacao_do_pedido(cliente.nome)
-tamanho_pizza = Message.tamanho_pizza()
+Mensagem.informacao_do_pedido(cliente.nome)
+tamanho_pizza = Mensagem.tamanho_pizza()
 VALOR_TOTAL = Pizza.Tamanho.retorna_valor(tamanho_pizza, VALOR_TOTAL)
-sabor_pizza = Message.sabor_pizza()
-observacao_pedido = Message.observacao_pedido()
-Message.registro_do_pedido(cliente.nome, sabor_pizza, tamanho_pizza, observacao_pedido)
-delivery = Message.taxa_frete()
+sabor_pizza = Mensagem.sabor_pizza()
+observacao_pedido = Mensagem.observacao_pedido()
+Mensagem.registro_do_pedido(cliente.nome, sabor_pizza, tamanho_pizza, observacao_pedido)
+delivery = Mensagem.taxa_frete()
 VALOR_TOTAL = TaxaFrete.calcula(delivery, VALOR_TOTAL, TAXA_FRETE)
 
 print("=" * 40)
