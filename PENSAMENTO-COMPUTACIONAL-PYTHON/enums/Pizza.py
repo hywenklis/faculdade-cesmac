@@ -6,7 +6,7 @@ class Tamanho(Enum):
     M = 20.00
     G = 30.00
     GG = 45.00
-    TM = 150.00
+    TF = 150.00
 
     def retorna_valor(self, valor):
 
@@ -18,6 +18,6 @@ class Tamanho(Enum):
             valor = Tamanho.G.value
         elif self == Tamanho.GG.name:
             valor = Tamanho.GG.value
-        elif self == Tamanho.TM.name:
-            valor = Tamanho.TM.value
+        elif self == Tamanho.TF.name:
+            valor = Tamanho.TF.value
         return valor

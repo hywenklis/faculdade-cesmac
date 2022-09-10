@@ -7,7 +7,6 @@
     <list default="true" id="21c1d05b-69d1-4038-8853-5cc3e34df162" name="Changes" comment="Remove variável não utilizada">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PENSAMENTO-COMPUTACIONAL-PYTHON/enums/Pizza.py" beforeDir="false" afterPath="$PROJECT_DIR$/PENSAMENTO-COMPUTACIONAL-PYTHON/enums/Pizza.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PENSAMENTO-COMPUTACIONAL-PYTHON/model/Pessoa.py" beforeDir="false" afterPath="$PROJECT_DIR$/PENSAMENTO-COMPUTACIONAL-PYTHON/model/Pessoa.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PENSAMENTO-COMPUTACIONAL-PYTHON/pizzaria.py" beforeDir="false" afterPath="$PROJECT_DIR$/PENSAMENTO-COMPUTACIONAL-PYTHON/pizzaria.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -168,9 +167,43 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/PENSAMENTO-COMPUTACIONAL-PYTHON/enums/Pizza.py</url>
-          <line>12</line>
-          <option name="timeStamp" value="1" />
+          <url>file://$PROJECT_DIR$/PENSAMENTO-COMPUTACIONAL-PYTHON/service/TaxaFrete.py</url>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/PENSAMENTO-COMPUTACIONAL-PYTHON/service/TaxaFrete.py</url>
+          <line>1</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/PENSAMENTO-COMPUTACIONAL-PYTHON/service/TaxaFrete.py</url>
+          <line>2</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/PENSAMENTO-COMPUTACIONAL-PYTHON/service/TaxaFrete.py</url>
+          <line>3</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/PENSAMENTO-COMPUTACIONAL-PYTHON/service/TaxaFrete.py</url>
+          <line>4</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/PENSAMENTO-COMPUTACIONAL-PYTHON/service/TaxaFrete.py</url>
+          <line>5</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/PENSAMENTO-COMPUTACIONAL-PYTHON/service/TaxaFrete.py</url>
+          <line>6</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/PENSAMENTO-COMPUTACIONAL-PYTHON/service/TaxaFrete.py</url>
+          <line>7</line>
+          <option name="timeStamp" value="10" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

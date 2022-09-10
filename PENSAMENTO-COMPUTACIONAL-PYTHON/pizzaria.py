@@ -1,5 +1,6 @@
 from enums import Pizza
 from model import Pessoa
+from service import TaxaFrete
 
 VALOR_TOTAL = 0
 TAXA_FRETE = 10.00
@@ -14,12 +15,12 @@ print("COMO PODEMOS LHE CHAMAR? ")
 cliente.set_nome()
 
 print(f"OLÁ {cliente.nome} VAMOS SEGUIR COM SEU PEDIDO, ABAIXO PASSE ALGUMAS INFORMAÇÕES PARA QUE POSSAMOS SEGUIR!")
-tamanho_pizza = input("Escolha entre os seguintes tamanho [P, M, G, GG, TM]: ")
-valor_da_pizza = Pizza.Tamanho.retorna_valor(tamanho_pizza, VALOR_TOTAL)
-VALOR_TOTAL += valor_da_pizza
+tamanho_pizza = input("Escolha entre os seguintes tamanho [P, M, G, GG, TF]: ")
+VALOR_TOTAL = Pizza.Tamanho.retorna_valor(tamanho_pizza, VALOR_TOTAL)
 
 sabor_pizza = input("Digite o sabor que deseja: ")
 observacao_pedido = input("Alguma observação para o seu pedido ?: ")
+
 print()
 print("=" * 40)
 print("{:^40}".format("PEDIDO DE PIZZA"))
@@ -34,13 +35,7 @@ print("=" * 40)
 print("{:^40}".format("TAXA DE FRETE"))
 print("=" * 40)
 delivery = input("SERÁ DELIVERY ? ESCOLHA [S/N]: ")
-
-if delivery == "S":
-    VALOR_TOTAL += TAXA_FRETE
-    print(f"FOI APLICADO UMA TAXA DE FRETE NO VALOR DE R$:{TAXA_FRETE}")
-else:
-    print("COMO NÃO SERÁ DELIVERY FICARÁ INSENTO DA TAXA DE FRETE!")
-print()
+VALOR_TOTAL = TaxaFrete.calcula(delivery, VALOR_TOTAL, TAXA_FRETE)
 
 print("=" * 40)
 print("{:^40}".format("DESCONTO"))
