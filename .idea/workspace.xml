@@ -7,7 +7,6 @@
     <list default="true" id="21c1d05b-69d1-4038-8853-5cc3e34df162" name="Changes" comment="Remove variável não utilizada">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PENSAMENTO-COMPUTACIONAL-PYTHON/enums/Pagamento.py" beforeDir="false" afterPath="$PROJECT_DIR$/PENSAMENTO-COMPUTACIONAL-PYTHON/enums/Pagamento.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PI-2/servidor/python.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -161,36 +160,5 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Remove variável não utilizada" />
     <option name="LAST_COMMIT_MESSAGE" value="Remove variável não utilizada" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/PENSAMENTO-COMPUTACIONAL-PYTHON/enums/Pagamento.py</url>
-          <line>25</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/PENSAMENTO-COMPUTACIONAL-PYTHON/enums/Pagamento.py</url>
-          <line>34</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/PENSAMENTO-COMPUTACIONAL-PYTHON/enums/Pagamento.py</url>
-          <line>39</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/PENSAMENTO-COMPUTACIONAL-PYTHON/enums/Pagamento.py</url>
-          <line>23</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/PENSAMENTO-COMPUTACIONAL-PYTHON/enums/Pagamento.py</url>
-          <line>12</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

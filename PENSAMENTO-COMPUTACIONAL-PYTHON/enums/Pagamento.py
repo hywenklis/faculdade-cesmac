@@ -29,8 +29,8 @@ def escolher_metodo_de_pagamento(valor_total, valor_total_parcelado, nome_client
 
         if valor_total > 0:
             valor_total_parcelado = valor_total / PARCELA
-            print(
-                f"{nome_cliente} VOCÊ DIVIDIU O SALDO DE R${valor_total} EM {PARCELA}x FICANDO NO VALOR DE R${valor_total_parcelado} CADA PARCELA")
+            print(f"{nome_cliente} VOCÊ DIVIDIU O SALDO DE R${valor_total} EM {PARCELA}x "
+                  f"FICANDO NO VALOR DE R${valor_total_parcelado} CADA PARCELA")
 
     elif METODO_PAGAMENTO == cartao[2]:
         print("PAGAMENTO NO DEBITO")
