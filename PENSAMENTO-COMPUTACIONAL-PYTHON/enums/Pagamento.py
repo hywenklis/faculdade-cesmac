@@ -10,6 +10,9 @@ class Virtual(Enum):
     PIX = 3
 
 
+cartao = [0, Fisico.CREDITO.value, Fisico.DEBITO.value, Virtual.PIX.value]
+
+
 def escolher_metodo_de_pagamento(valor_total, valor_total_parcelado, nome_cliente):
     print("=" * 40)
     print("{:^40}".format("PAGAMENTO"))
@@ -20,7 +23,7 @@ def escolher_metodo_de_pagamento(valor_total, valor_total_parcelado, nome_client
     print("3 - PIX")
     METODO_PAGAMENTO = int(input())
 
-    if METODO_PAGAMENTO == Fisico.CREDITO.value:
+    if METODO_PAGAMENTO == cartao[1]:
         print("PAGAMENTO NO CREDITO COM PARCELA")
         PARCELA = int(input("DESEJA PARCELAR EM QUANTAS VEZES: "))
 
@@ -29,12 +32,12 @@ def escolher_metodo_de_pagamento(valor_total, valor_total_parcelado, nome_client
             print(
                 f"{nome_cliente} VOCÊ DIVIDIU O SALDO DE R${valor_total} EM {PARCELA}x FICANDO NO VALOR DE R${valor_total_parcelado} CADA PARCELA")
 
-    elif METODO_PAGAMENTO == Fisico.DEBITO.value:
+    elif METODO_PAGAMENTO == cartao[2]:
         print("PAGAMENTO NO DEBITO")
         if valor_total > 0:
             print(f"{nome_cliente} SEU VALOR TOTAL É DE: R${valor_total}")
 
-    elif METODO_PAGAMENTO == Virtual.PIX.value:
+    elif METODO_PAGAMENTO == cartao[3]:
         print("PAGAMENTO NO PIX")
         if valor_total > 0:
             print(f"{nome_cliente} SEU VALOR TOTAL É DE: R${valor_total}")
