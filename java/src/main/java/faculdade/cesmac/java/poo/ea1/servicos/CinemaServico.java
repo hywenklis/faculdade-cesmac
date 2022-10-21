@@ -4,10 +4,14 @@ import faculdade.cesmac.java.poo.ea1.dominio.Filme;
 
 import java.util.List;
 
-public class Cinema {
+import static faculdade.cesmac.java.poo.ea1.servicos.FilmeServico.filmeEncontrado;
 
-    public static void encontraFilme(List<Filme> filmes, String filmeEscolhido) {
+public class CinemaServico {
+
+    public static void encontraFilmeNaLista(List<Filme> filmes, String filmeEscolhido) {
+
         int posicaoDoFilme = 0;
+
         while (!filmeEscolhido.equals(filmes.get(posicaoDoFilme).getNome())) {
 
             posicaoDoFilme++;
@@ -17,9 +21,8 @@ public class Cinema {
                 break;
             }
 
-            if (filmeEscolhido.equals(filmes.get(posicaoDoFilme).getNome())) {
-                break;
-            }
+            if (filmeEncontrado(filmes, filmeEscolhido, posicaoDoFilme)) break;
+
         }
         filmes.stream().filter(filme -> filme.getNome().equals(filmeEscolhido)).forEach(System.out::println);
     }

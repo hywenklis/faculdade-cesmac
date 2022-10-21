@@ -2,10 +2,10 @@ package faculdade.cesmac.java.poo.ea1.servicos;
 
 import faculdade.cesmac.java.poo.ea1.dominio.TipoIngresso;
 
-public class Ingresso {
-    public static Double retornaValorTotalDoIngresso(Integer qtd_ingresso, String tipoDoIngresso) {
+public class IngressoServico {
+    public static Double retornaValorTotalDoIngresso(Integer qtd_ingresso, String tipoDoIngressoEscolhido) {
         double valorTotal;
-        if (retornaTipoDoIngresso(tipoDoIngresso).equals(TipoIngresso.INTEIRA)) {
+        if (retornaTipoDoIngresso(tipoDoIngressoEscolhido).equals(TipoIngresso.INTEIRA)) {
             valorTotal = TipoIngresso.INTEIRA.getValor() * qtd_ingresso;
         } else {
             valorTotal = TipoIngresso.MEIA.getValor() * qtd_ingresso;
@@ -13,9 +13,9 @@ public class Ingresso {
         return valorTotal;
     }
 
-    public static TipoIngresso retornaTipoDoIngresso(String tipoEngresso) {
+    public static TipoIngresso retornaTipoDoIngresso(String tipoIngressoEscolhido) {
         TipoIngresso categoria;
-        if (tipoEngresso.equals("I")) {
+        if (tipoIngressoEscolhido.equals("I".toLowerCase())) {
             categoria = TipoIngresso.INTEIRA;
         } else {
             categoria = TipoIngresso.MEIA;
