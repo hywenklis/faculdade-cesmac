@@ -4,8 +4,8 @@ import faculdade.cesmac.java.poo.ea1.dominio.Filme;
 import faculdade.cesmac.java.poo.ea1.dominio.Sessao;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
+import java.util.Optional;
 import java.util.Scanner;
 
 import static faculdade.cesmac.java.poo.ea1.servicos.CinemaServico.encontraFilmeNaLista;
@@ -52,17 +52,17 @@ public class Main {
         List<Sessao> sessoes = List.of(sessao1, sessao2, sessao3);
 
         filme1.setNome("Vingadores");
-        filme1.setSessao(Collections.singletonList(sessoes.get(sessaoEscolhida - 1)));
+        filme1.setSessao(List.of(sessoes.get(sessaoEscolhida - 1)));
         filme1.setQtd_ingresso(qtd_ingressos_adquiridos);
         filme1.setTipoIngresso(retornaTipoDoIngresso(tipoDeIngressoEscolhido));
 
         filme2.setNome("Titanic");
-        filme2.setSessao(Collections.singletonList(sessoes.get(sessaoEscolhida - 1)));
+        filme2.setSessao(List.of(sessoes.get(sessaoEscolhida - 1)));
         filme2.setQtd_ingresso(qtd_ingressos_adquiridos);
         filme2.setTipoIngresso(retornaTipoDoIngresso(tipoDeIngressoEscolhido));
 
         filme3.setNome("Panico");
-        filme3.setSessao(Collections.singletonList(sessoes.get(sessaoEscolhida - 1)));
+        filme3.setSessao(List.of(sessoes.get(sessaoEscolhida - 1)));
         filme3.setQtd_ingresso(qtd_ingressos_adquiridos);
         filme3.setTipoIngresso(retornaTipoDoIngresso(tipoDeIngressoEscolhido));
 
@@ -70,7 +70,9 @@ public class Main {
         filmes.add(filme2);
         filmes.add(filme3);
 
-        encontraFilmeNaLista(filmes, filmeEscolhido);
+        Optional<Filme> filmeEncontrado = encontraFilmeNaLista(filmes, filmeEscolhido);
+        System.out.println(filmeEncontrado);
+
         double valorTotal = retornaValorTotalDoIngresso(qtd_ingressos_adquiridos, tipoDeIngressoEscolhido);
         System.out.println("Valor total dos ingressos que foi solicitado é de: " + valorTotal);
     }
