@@ -5,7 +5,6 @@ import faculdade.cesmac.java.poo.ea1.dominio.Sessao;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 import java.util.Scanner;
 
 import static faculdade.cesmac.java.poo.ea1.servicos.CinemaServico.encontraFilmeNaLista;
@@ -70,7 +69,7 @@ public class Main {
         filmes.add(filme2);
         filmes.add(filme3);
 
-        Optional<Filme> filmeEncontrado = encontraFilmeNaLista(filmes, filmeEscolhido);
+        Filme filmeEncontrado = encontraFilmeNaLista(filmes, filmeEscolhido);
         System.out.println(filmeEncontrado);
 
         double valorTotal = retornaValorTotalDoIngresso(qtd_ingressos_adquiridos, tipoDeIngressoEscolhido);
