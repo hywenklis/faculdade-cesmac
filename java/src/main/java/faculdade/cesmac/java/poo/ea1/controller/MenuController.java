@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 import static faculdade.cesmac.java.poo.ea1.builder.Dados.retornaCompraDeIngresso;
 import static faculdade.cesmac.java.poo.ea1.servicos.CinemaServico.nomeDosfilmesNoCartaz;
-import static faculdade.cesmac.java.poo.ea1.servicos.SessaoServico.retornaSessaoAdquirida;
+import static faculdade.cesmac.java.poo.ea1.servicos.SessaoServico.retornaSessaoDoFilme;
 
 
 public class MenuController {
@@ -31,7 +31,7 @@ public class MenuController {
 
             switch (opcao) {
                 case 1 -> nomeDosfilmesNoCartaz();
-                case 2 -> retornaSessaoAdquirida();
+                case 2 -> retornaSessaoDoFilme();
                 case 3 -> retornaCompraDeIngresso();
             }
 

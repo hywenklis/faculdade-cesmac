@@ -14,7 +14,7 @@ public class SessaoServico {
                 .orElseThrow(() -> new RuntimeException("Sessão não encontrada!"));
     }
 
-    public static Sessao retornaSessaoAdquirida() {
+    public static Sessao retornaSessaoDoFilme() {
         List<Sessao> sessoes = Dados.sessoesDoFilme();
         sessoes.stream().map(Sessao::toString).forEach(System.out::println);
         return new Sessao();
