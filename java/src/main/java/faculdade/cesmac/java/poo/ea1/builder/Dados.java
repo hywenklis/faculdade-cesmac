@@ -1,4 +1,4 @@
-package faculdade.cesmac.java.poo.ea1.aplicacao;
+package faculdade.cesmac.java.poo.ea1.builder;
 
 import faculdade.cesmac.java.poo.ea1.dominio.Filme;
 import faculdade.cesmac.java.poo.ea1.dominio.Ingresso;

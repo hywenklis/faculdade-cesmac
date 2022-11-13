@@ -2,7 +2,7 @@ package faculdade.cesmac.java.poo.ea1.controller;
 
 import java.util.Scanner;
 
-import static faculdade.cesmac.java.poo.ea1.aplicacao.Dados.retornaCompraDeIngresso;
+import static faculdade.cesmac.java.poo.ea1.builder.Dados.retornaCompraDeIngresso;
 import static faculdade.cesmac.java.poo.ea1.servicos.CinemaServico.nomeDosfilmesNoCartaz;
 import static faculdade.cesmac.java.poo.ea1.servicos.SessaoServico.retornaSessaoAdquirida;
 

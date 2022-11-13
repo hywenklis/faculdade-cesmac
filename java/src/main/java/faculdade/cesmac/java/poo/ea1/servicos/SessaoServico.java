@@ -1,11 +1,9 @@
 package faculdade.cesmac.java.poo.ea1.servicos;
 
-import faculdade.cesmac.java.poo.ea1.aplicacao.Dados;
-import faculdade.cesmac.java.poo.ea1.dominio.Filme;
+import faculdade.cesmac.java.poo.ea1.builder.Dados;
 import faculdade.cesmac.java.poo.ea1.dominio.Sessao;
 
 import java.util.List;
-import java.util.Scanner;
 
 public class SessaoServico {
 
