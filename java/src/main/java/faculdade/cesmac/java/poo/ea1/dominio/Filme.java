@@ -1,16 +1,11 @@
 package faculdade.cesmac.java.poo.ea1.dominio;
 
-import java.util.List;
-
 public class Filme {
     private String nome;
-    private List<Sessao> sessao;
-    private Integer qtd_ingresso;
-    private TipoIngresso tipoIngresso;
-
-    public void setTipoIngresso(TipoIngresso tipoIngresso) {
-        this.tipoIngresso = tipoIngresso;
-    }
+    private String diretor;
+    private String descricao;
+    private String genero;
+    private String duracaoFilme;
 
     public String getNome() {
         return nome;
@@ -20,17 +15,30 @@ public class Filme {
         this.nome = nome;
     }
 
-    public void setSessao(List<Sessao> sessao) {
-        this.sessao = sessao;
+    public void setDiretor(String diretor) {
+        this.diretor = diretor;
+    }
+
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
+    }
+
+    public void setGenero(String genero) {
+        this.genero = genero;
+    }
+
+    public void setDuracaoFilme(String duracaoFilme) {
+        this.duracaoFilme = duracaoFilme;
     }
 
     @Override
     public String toString() {
-        return "Filme{" + "nome='" + nome + '\'' + ", sessao=" + sessao + ", qtd_ingresso=" + qtd_ingresso + ", tipoIngresso=" + tipoIngresso + '}';
+        return "====================================================" +
+                "\nFILME = " + nome + "\n" +
+                "\nDIRETOR = " + diretor + "\n" +
+                "\nDESCRIÇÃO = " + descricao +
+                "\nGÊNERO = " + genero + "\n" +
+                "\nDURAÇÃO DO FILME = " + duracaoFilme + "\n" +
+                "\n=================================================";
     }
-
-    public void setQtd_ingresso(Integer qtd_ingresso) {
-        this.qtd_ingresso = qtd_ingresso;
-    }
-
 }

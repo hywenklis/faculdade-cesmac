@@ -5,9 +5,8 @@ public class Sessao {
     private Integer sala;
     private String hora;
 
-    @Override
-    public String toString() {
-        return "{sala=" + sala + ", hora='" + hora + '\'' + '}';
+    public Integer getSala() {
+        return sala;
     }
 
     public void setSala(Integer sala) {
@@ -16,6 +15,11 @@ public class Sessao {
 
     public void setHora(String hora) {
         this.hora = hora;
+    }
+
+    @Override
+    public String toString() {
+        return "{sala=" + sala + ", hora='" + hora + '\'' + '}';
     }
 
 }
