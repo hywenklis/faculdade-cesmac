@@ -6,6 +6,12 @@ public class Filme {
     private String descricao;
     private String genero;
     private String duracaoFilme;
+    private Boolean filme3D;
+
+    public Boolean setFilme3D(Boolean filme3D) {
+        this.filme3D = filme3D;
+        return filme3D;
+    }
 
     public String getNome() {
         return nome;

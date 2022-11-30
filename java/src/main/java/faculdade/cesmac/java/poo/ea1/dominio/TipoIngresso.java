@@ -1,7 +1,10 @@
 package faculdade.cesmac.java.poo.ea1.dominio;
 
 public enum TipoIngresso {
-    INTEIRA(24.00), MEIA(12.00);
+    VIP_INTEIRA(48.00),
+    VIP_MEIA(24.00),
+    COMUM_INTEIRA(24.00),
+    COMUM_MEIA(12.00);
 
     private final Double valor;
 

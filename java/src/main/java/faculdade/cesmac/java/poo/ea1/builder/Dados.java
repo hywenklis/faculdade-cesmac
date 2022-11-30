@@ -3,6 +3,7 @@ package faculdade.cesmac.java.poo.ea1.builder;
 import faculdade.cesmac.java.poo.ea1.dominio.Filme;
 import faculdade.cesmac.java.poo.ea1.dominio.Ingresso;
 import faculdade.cesmac.java.poo.ea1.dominio.Sessao;
+import faculdade.cesmac.java.poo.ea1.servicos.IngressoServico;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -10,6 +11,7 @@ import java.util.Scanner;
 
 import static faculdade.cesmac.java.poo.ea1.servicos.CinemaServico.encontraFilmeNaLista;
 import static faculdade.cesmac.java.poo.ea1.servicos.CinemaServico.nomeDosfilmesNoCartaz;
+import static faculdade.cesmac.java.poo.ea1.servicos.CinemaServico.retornaFilme3D;
 import static faculdade.cesmac.java.poo.ea1.servicos.IngressoServico.retornaQtdIngressoEscolhido;
 import static faculdade.cesmac.java.poo.ea1.servicos.IngressoServico.retornaTipoDoIngresso;
 import static faculdade.cesmac.java.poo.ea1.servicos.IngressoServico.retornaValorTotalDoIngresso;
@@ -97,9 +99,11 @@ public class Dados {
         System.out.println(filmeEncontrado);
         ingresso.setFilme(String.valueOf(filmeEncontrado.getNome()));
 
-        System.out.println("Digite o tipo de ingresso [I - INTEIRA / M - MEIA]: ");
-        String tipoIngressoEscolhido = scan.nextLine().toLowerCase();
+        System.out.println("Digite o tipo de ingresso [1 - COMUM_INTEIRA / 2 - COMUM_MEIA / 3 - VIP_INTEIRA / 4 - VIP_MEIA]: ");
+        Integer tipoIngressoEscolhido = scan.nextInt();
         ingresso.setTipoIngresso(retornaTipoDoIngresso(tipoIngressoEscolhido));
+
+        Boolean filme3d = retornaFilme3D(filmeEncontrado, tipoIngressoEscolhido);
 
         System.out.println("Escolha a sessao para assistir o filme [1 - 18hrs, 2 - 19hrs, 3 - 20hrs]: ");
         Integer sessaoEscolhida = scan.nextInt();
@@ -115,6 +119,7 @@ public class Dados {
 
         double valorTotal = retornaValorTotalDoIngresso(ingresso.getQtd_ingresso(), ingresso.getTipoIngresso());
         System.out.println("Valor total dos ingressos que foi solicitado é de: R$" + valorTotal);
+        IngressoServico.acessoLanchonete(filme3d);
         return ingressos;
     }
 
