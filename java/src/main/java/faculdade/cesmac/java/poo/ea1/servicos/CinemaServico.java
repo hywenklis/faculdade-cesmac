@@ -2,9 +2,12 @@ package faculdade.cesmac.java.poo.ea1.servicos;
 
 import faculdade.cesmac.java.poo.ea1.builder.Dados;
 import faculdade.cesmac.java.poo.ea1.dominio.Filme;
+import faculdade.cesmac.java.poo.ea1.dominio.TipoIngresso;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
+import static faculdade.cesmac.java.poo.ea1.dominio.TipoIngresso.*;
 import static faculdade.cesmac.java.poo.ea1.servicos.IngressoServico.retornaTipoDoIngresso;
 
 public class CinemaServico {
@@ -15,15 +18,16 @@ public class CinemaServico {
                 .orElseThrow(() -> new RuntimeException("Filme não encontrado!"));
     }
 
-    public static void nomeDosfilmesNoCartaz() {
+    public static List<String> nomeDosfilmesNoCartaz() {
         List<Filme> filmes = Dados.filmesNoCartaz();
-        filmes.stream().map(Filme::getNome).forEach(System.out::println);
+        return filmes.stream()
+                .map(Filme::getNome)
+                .collect(Collectors.toList());
     }
 
-    public static Boolean retornaFilme3D(Filme filmeEncontrado, Integer tipoIngressoEscolhido) {
-        return switch (retornaTipoDoIngresso(tipoIngressoEscolhido)) {
-            case VIP_INTEIRA, VIP_MEIA -> filmeEncontrado.setFilme3D(true);
-            default -> filmeEncontrado.setFilme3D(false);
-        };
+    public static Boolean retornaFilme3D(Filme filme, Integer tipoIngressoEscolhido) {
+        TipoIngresso tipo = retornaTipoDoIngresso(tipoIngressoEscolhido);
+        filme.setFilme3D(tipo == VIP_INTEIRA || tipo == VIP_MEIA);
+        return filme.getFilme3D();
     }
 }

@@ -6,6 +6,11 @@ public class Filme {
     private String descricao;
     private String genero;
     private String duracaoFilme;
+
+    public Boolean getFilme3D() {
+        return filme3D;
+    }
+
     private Boolean filme3D;
 
     public Boolean setFilme3D(Boolean filme3D) {

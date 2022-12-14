@@ -1,10 +1,11 @@
 package faculdade.cesmac.java.poo.ea1.controller;
 
-import java.util.Scanner;
+import faculdade.cesmac.java.poo.ea1.servicos.command.Command;
+import faculdade.cesmac.java.poo.ea1.servicos.command.impl.CompraIngressoCommand;
+import faculdade.cesmac.java.poo.ea1.servicos.command.impl.MostrarFilmesNoCartazCommand;
+import faculdade.cesmac.java.poo.ea1.servicos.command.impl.MostrarSessaoDoFilmeCommand;
 
-import static faculdade.cesmac.java.poo.ea1.builder.Dados.retornaCompraDeIngresso;
-import static faculdade.cesmac.java.poo.ea1.servicos.CinemaServico.nomeDosfilmesNoCartaz;
-import static faculdade.cesmac.java.poo.ea1.servicos.SessaoServico.retornaSessaoDoFilme;
+import java.util.Scanner;
 
 
 public class MenuController {
@@ -22,23 +23,36 @@ public class MenuController {
     }
 
     public static void main(String[] args) {
-        int opcao;
         Scanner entrada = new Scanner(System.in);
 
-        do {
-            menu();
-            opcao = entrada.nextInt();
+        while (true) {
+            showMenu();
+            int opcao = entrada.nextInt();
 
-            switch (opcao) {
-                case 1 -> nomeDosfilmesNoCartaz();
-                case 2 -> retornaSessaoDoFilme();
-                case 3 -> retornaCompraDeIngresso();
+            if (opcao == 0) {
+                break;
             }
 
-            if (opcao > 3) {
-                System.err.println("Opção inválida");
-            }
+            Command command = retorneComandoParaOpcao(opcao);
 
-        } while (opcao != 0);
+            if (command == null) {
+                System.err.println("Invalid option");
+            } else {
+                command.executar();
+            }
+        }
+    }
+
+    private static void showMenu() {
+        menu();
+    }
+
+    private static Command retorneComandoParaOpcao(int opcao) {
+        return switch (opcao) {
+            case 1 -> new MostrarFilmesNoCartazCommand();
+            case 2 -> new MostrarSessaoDoFilmeCommand();
+            case 3 -> new CompraIngressoCommand();
+            default -> null;
+        };
     }
 }
