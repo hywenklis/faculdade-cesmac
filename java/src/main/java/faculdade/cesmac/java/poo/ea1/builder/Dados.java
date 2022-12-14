@@ -90,7 +90,7 @@ public class Dados {
         List<Ingresso> ingressos = new ArrayList<>();
         Ingresso ingresso = new Ingresso();
 
-        nomeDosfilmesNoCartaz();
+        System.out.println(nomeDosfilmesNoCartaz());
 
         System.out.println("Digite o filme que você quer assistir: ");
         String filmeEscolhido = scan.nextLine();
