@@ -1,0 +1,6 @@
+[submodule "faculdade-cesmac"]
+	path = faculdade-cesmac
+	url = git@github.com:hywenklis/faculdade-cesmac.git
+[submodule "desenvolvimento-mobile/state"]
+	path = desenvolvimento-mobile/state
+	url = git@github.com:hywenklis/faculdade-cesmac.git
